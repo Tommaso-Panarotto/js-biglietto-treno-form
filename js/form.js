@@ -20,6 +20,7 @@ const userGenerate = document.getElementById('generate-btn');
 const userReset = document.getElementById('reset-btn');
 const userForm = document.querySelector('form');
 const userData = document.querySelectorAll('.info');
+const userVagon = document.getElementById('vagon');
 
 //Fase elaboratoria
 userGenerate.addEventListener('click', function () {
@@ -79,6 +80,11 @@ userGenerate.addEventListener('click', function () {
     //mostro il prezzo
     console.log('il costo del tuo biglietto é: €' + userPrice.toFixed(2));
     resultPrice.innerText = userPrice.toFixed(2) + '€';
+
+    //Vagone
+    const vagon = Math.floor(Math.random() * 9) + 1;
+    userVagon.innerText = vagon;
+
 
 }
 )
