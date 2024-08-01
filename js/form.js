@@ -46,5 +46,12 @@ userGenerate.addEventListener('click', function () {
         location.reload();
     }
 
+    //Fase di elaborazione
+    //calcolo costo bieglietto
+    let userPrice = inputKilometres * 0.21;
+
+    //mostro il prezzo
+    resultPrice.innerText = userPrice.toFixed(2) + '€';
+
 }
 )
