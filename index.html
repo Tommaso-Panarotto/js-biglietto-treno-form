@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="IT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Style-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body class="bg-body-secondary">
+
+    <!--Header-->
+    <header>
+
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg bg-red">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="#"><img src="img/logo.png" alt="Logo"
+                        class="img-fluid">
+                    <h1 class="mb-0 ms-2"><i>FRECCIABOOLEAN</i></h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">CHI SIAMO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">OFFERTE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">INFO</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--Main-->
+    <main>
+
+        <!--Form-->
+        <h2 class="text-success text-center mt-5">CALCOLA IL PREZZO TUO BIGLIETTO</h2>
+        <form class="container bg-white py-3">
+            <div class="d-flex gap-5 justify-content-center text-center">
+                <div class="ask-fullname">
+                    <h5>Nome e Cognome</h5>
+                    <div class="input-group input-group-sm mb-3">
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-sm">
+                    </div>
+                </div>
+                <div class="ask-kms">
+                    <h5>Km da percorrere</h5>
+                    <input type="number" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="ask-age">
+                    <h5>Fascia d'età</h5>
+                    <select class="form-select" aria-label="Default select example">
+                        <option value="1">Minorenne</option>
+                        <option selected value="2">Adulto</option>
+                        <option value="3">Pensionato</option>
+                    </select>
+                </div>
+            </div>
+            <div class="button-group d-flex gap-5 justify-content-center mt-3">
+                <div class="generate"><button type="button"
+                        class="p-2 rounded bg-success text-white border-0">Genera</button>
+                </div>
+                <div class="reset"><button type="button"
+                        class="p-2 rounded bg-danger text-white border-0">Annulla</button></div>
+            </div>
+        </form>
+
+        <!--Il tuo Biglietto-->
+        <h2 class="text-success text-center mt-5">IL TUO BIGLIETTO</h2>
+        <div class="container bg-white">
+            <div class="d-flex p-3 gap-4">
+                <div class="station flex-wrap w-50 d-flex gap-2">
+                    <div class="partenza"><b class="fs-3 text-success">16.00</b>
+                        <h5>Milano Centrale</h5>
+                    </div>
+                    <div class="tempo pt-2">
+                        <div class="trip d-flex flex-wrap align-items-center gap-1">60min</div>
+                    </div>
+                    <div class="arrivo"><b class="fs-3 text-success">17.00</b>
+                        <h5>Torino Porta Nuova</h5>
+                    </div>
+                </div>
+                <div class="info flex-wrap d-flex w-50 align-items-center">
+                    <div id="kilometres"></div>
+                    <div id="age"></div>
+                    <div class="price">
+                        <h3 id="total-price" class="text-danger"></h3>
+                        <div id="sale"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--JS-->
+    <script src="js/form.js"></script>
+</body>
+
+</html>

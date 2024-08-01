@@ -1,0 +1,42 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Generics */
+body {
+    font-family: sans-serif;
+}
+
+.navbar h1 {
+    font-size: 30px;
+}
+
+/* Utils */
+
+/*BG Color*/
+.bg-red {
+    background-color: #A6160A;
+}
+
+/*Header*/
+.navbar a {
+    color: white;
+}
+
+/*Main*/
+.trip::before,
+.trip::after {
+    content: '';
+    display: inline-block;
+    background-color: #fff;
+    border-bottom: 1px dashed;
+    width: 60px;
+}
+
+.info>div {
+    flex-basis: calc(100% / 3);
+    text-align: end;
+}
