@@ -18,6 +18,8 @@ const userKilometres = document.getElementById('KMS');
 const userAge = document.querySelector('select');
 const userGenerate = document.getElementById('generate-btn');
 const userReset = document.getElementById('reset-btn');
+const userForm = document.querySelector('form');
+const userData = document.querySelectorAll('.info');
 
 //Fase elaboratoria
 userGenerate.addEventListener('click', function () {
@@ -31,11 +33,6 @@ userGenerate.addEventListener('click', function () {
     resultName.innerText = inputName;
     resultkilometres.innerText = `Fai ${inputKilometres} Km`;
     resultAge.innerText = inputAge;
-
-    //Mostro i dati inseriti in console
-    console.log(inputName);
-    console.log(inputKilometres);
-    console.log(inputAge);
 
     //Validazione
     const isKilometresInvalid = isNaN(inputKilometres) || inputKilometres < 1;
@@ -83,5 +80,16 @@ userGenerate.addEventListener('click', function () {
     console.log('il costo del tuo biglietto é: €' + userPrice.toFixed(2));
     resultPrice.innerText = userPrice.toFixed(2) + '€';
 
+}
+)
+
+//Reset del Form e dei campi compilati
+userReset.addEventListener('click', function () {
+    userForm.reset();
+
+    const userData = document.querySelectorAll(".info");
+    for (let i = 0; i < userData.length; i++) {
+        userData[i].innerText = '';
+    }
 }
 )
