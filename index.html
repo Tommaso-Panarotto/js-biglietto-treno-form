@@ -53,33 +53,33 @@
         <!--Form-->
         <h2 class="text-success text-center mt-5">CALCOLA IL PREZZO TUO BIGLIETTO</h2>
         <form class="container bg-white py-3">
-            <div class="d-flex gap-5 justify-content-center text-center">
+            <div class="d-flex gap-5 justify-content-center text-center flex-wrap">
                 <div class="ask-fullname">
                     <h5>Nome e Cognome</h5>
                     <div class="input-group input-group-sm mb-3">
-                        <input type="text" class="form-control" aria-label="Sizing example input"
-                            aria-describedby="inputGroup-sizing-sm">
+                        <input type="text" id="NAME" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-sm" value="Tommaso Panarotto">
                     </div>
                 </div>
                 <div class="ask-kms">
                     <h5>Km da percorrere</h5>
-                    <input type="number" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-sm">
+                    <input type="number" id="KMS" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-sm" value="100">
                 </div>
                 <div class="ask-age">
                     <h5>Fascia d'età</h5>
                     <select class="form-select" aria-label="Default select example">
-                        <option value="1">Minorenne</option>
-                        <option selected value="2">Adulto</option>
-                        <option value="3">Pensionato</option>
+                        <option>Minorenne</option>
+                        <option selected>Adulto</option>
+                        <option>Pensionato</option>
                     </select>
                 </div>
             </div>
             <div class="button-group d-flex gap-5 justify-content-center mt-3">
-                <div class="generate"><button type="button"
+                <div class="generate"><button type="button" id="generate-btn"
                         class="p-2 rounded bg-success text-white border-0">Genera</button>
                 </div>
-                <div class="reset"><button type="button"
+                <div class="reset"><button type="button" id="reset-btn"
                         class="p-2 rounded bg-danger text-white border-0">Annulla</button></div>
             </div>
         </form>
@@ -100,6 +100,7 @@
                     </div>
                 </div>
                 <div class="info flex-wrap d-flex w-50 align-items-center">
+                    <div id="full-name"></div>
                     <div id="kilometres"></div>
                     <div id="age"></div>
                     <div class="price">

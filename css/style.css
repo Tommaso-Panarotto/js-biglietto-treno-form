@@ -37,6 +37,6 @@ body {
 }
 
 .info>div {
-    flex-basis: calc(100% / 3);
-    text-align: end;
+    flex-basis: calc(100% / 4);
+    text-align: center;
 }
