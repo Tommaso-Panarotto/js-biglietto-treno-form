@@ -21,6 +21,7 @@ const userReset = document.getElementById('reset-btn');
 const userForm = document.querySelector('form');
 const userData = document.querySelectorAll('.info');
 const userVagon = document.getElementById('vagon');
+const userCD = document.getElementById('CD')
 
 //Fase elaboratoria
 userGenerate.addEventListener('click', function () {
@@ -84,6 +85,10 @@ userGenerate.addEventListener('click', function () {
     //Vagone
     const vagon = Math.floor(Math.random() * 9) + 1;
     userVagon.innerText = vagon;
+
+    //Codice Passeggero
+    const CD = `9` + (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
+    userCD.innerText = CD;
 
 
 }
