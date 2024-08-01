@@ -32,6 +32,11 @@ userGenerate.addEventListener('click', function () {
     resultkilometres.innerText = `Fai ${inputKilometres} Km`;
     resultAge.innerText = inputAge;
 
+    //Mostro i dati inseriti in console
+    console.log(inputName);
+    console.log(inputKilometres);
+    console.log(inputAge);
+
     //Validazione
     const isKilometresInvalid = isNaN(inputKilometres) || inputKilometres < 1;
     const isNameInvalid = !inputName;
@@ -50,7 +55,32 @@ userGenerate.addEventListener('click', function () {
     //calcolo costo bieglietto
     let userPrice = inputKilometres * 0.21;
 
+    //Applicazione eventuali sconti
+    if (userAge.value === 'Minorenne') {
+        resultSale.innerHTML = `<del class="text-danger">€${userPrice.toFixed(2)}</del>`;
+
+        //calcolo sconto minori
+        userPrice *= 0.8;
+
+        //mostro Sconto
+        resultSale.innerHTML += " " + '20% di sconto'
+
+    } else if (userAge.value === 'Pensionato') {
+        resultSale.innerHTML = `<del class="text-danger">€${userPrice.toFixed(2)}</del>`;
+
+        //calcolo sconto pensionati
+        userPrice *= 0.6;
+
+        //mostro sconto
+        resultSale.innerHTML += " " + '40% di sconto'
+    } else {
+
+        //pulisco campo sconti perchè non applicabile
+        resultSale.innerText = "";
+    }
+
     //mostro il prezzo
+    console.log('il costo del tuo biglietto é: €' + userPrice.toFixed(2));
     resultPrice.innerText = userPrice.toFixed(2) + '€';
 
 }
