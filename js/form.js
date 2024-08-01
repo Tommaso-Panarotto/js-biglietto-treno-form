@@ -18,3 +18,18 @@ const userKilometres = document.getElementById('KMS');
 const userAge = document.querySelector('select');
 const userGenerate = document.getElementById('generate-btn');
 const userReset = document.getElementById('reset-btn')
+
+//Fase elaboratoria
+userGenerate.addEventListener('click', function () {
+
+    //Fase raccolta dati
+    const inputName = userName.value.trim();
+    const inputKilometres = userKilometres.value.trim();
+    const inputAge = userAge.value;
+
+    //mostro i dati inseriti
+    resultName.innerText = inputName;
+    resultkilometres.innerText = `Fai ${inputKilometres} Km`;
+    resultAge.innerText = inputAge;
+}
+)
